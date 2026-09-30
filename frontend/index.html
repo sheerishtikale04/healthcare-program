@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="HealthCare+ - Modern healthcare platform for doctors, appointments, medicines, video consultation and emergency support.">
+
+    <meta name="theme-color" content="#0b9f9a">
+
+    <title>HealthCare+ | Healthcare Web Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="#home" class="logo">
+            <span class="logo-mark">✚</span>
+            <span>HealthCare<span>+</span></span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+
+            <a href="#home">Home</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#medicine">Medicine</a>
+
+            <a href="#doctors">Doctors</a>
+
+            <a href="#appointment">Appointment</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <button
+            class="emergency-btn"
+            type="button"
+            onclick="emergencyCall()">
+
+            🚨 Emergency
+
+        </button>
+
+        <button
+            class="menu-btn"
+            type="button"
+            onclick="toggleMenu()">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HOME ================= -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    TRUSTED HEALTHCARE PLATFORM
+                </span>
+
+                <h1>
+                    Better Care.
+                    <br>
+                    <span>Better Health.</span>
+                </h1>
+
+                <p>
+                    Find doctors, book appointments, check medicine
+                    availability, connect through video consultation
+                    and get emergency support.
+                </p>
+
+                <div class="hero-actions">
+
+                    <button
+                        class="primary-btn"
+                        type="button"
+                        onclick="bookAppointment()">
+
+                        Book Appointment →
+
+                    </button>
+
+                    <button
+                        class="secondary-btn"
+                        type="button"
+                        onclick="scrollToSection('services')">
+
+                        Explore Services
+
+                    </button>
+
+                </div>
+
+                <div class="trust-row">
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Support</span>
+                    </div>
+
+                    <div>
+                        <strong>50+</strong>
+                        <span>Doctors</span>
+                    </div>
+
+                    <div>
+                        <strong>10k+</strong>
+                        <span>Patients</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Doctor Hero Image -->
+
+            <div class="hero-visual">
+
+                <div class="circle circle-one"></div>
+
+                <div class="circle circle-two"></div>
+
+                <div class="doctor-illustration">
+
+                    <div class="doctor-head"></div>
+
+                    <div class="doctor-body">
+
+                        <span class="stethoscope">
+                            ◯
+                        </span>
+
+                        <span class="doctor-cross">
+                            ✚
+                        </span>
+
+                    </div>
+
+                    <div class="doctor-arm"></div>
+
+                </div>
+
+
+                <div class="floating-card card-top">
+
+                    <span>❤️</span>
+
+                    <div>
+                        <strong>Healthy Life</strong>
+                        <small>Your health matters</small>
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-bottom">
+
+                    <span>✓</span>
+
+                    <div>
+                        <strong>Expert Doctors</strong>
+                        <small>Available for you</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats">
+
+            <div>
+                <strong>Professional Care</strong>
+                <span>Qualified healthcare professionals</span>
+            </div>
+
+            <div>
+                <strong>Easy Booking</strong>
+                <span>Schedule appointments easily</span>
+            </div>
+
+            <div>
+                <strong>Fast Support</strong>
+                <span>Help when you need it</span>
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICES ================= -->
+
+        <section id="services" class="section">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    OUR SERVICES
+                </span>
+
+                <h2>
+                    Healthcare made
+                    <span>simple</span>
+                </h2>
+
+                <p>
+                    Everything you need to manage your healthcare
+                    in one place.
+                </p>
+
+            </div>
+
+
+            <div class="service-grid">
+
+                <!-- Find Doctor -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        👨‍⚕️
+                    </div>
+
+                    <h3>
+                        Find Doctors
+                    </h3>
+
+                    <p>
+                        Explore doctors and healthcare specialists.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="findDoctor()">
+
+                        Find Doctor →
+
+                    </button>
+
+                </article>
+
+
+                <!-- Appointment -->
+
+                <article class="service-card featured">
+
+                    <div class="service-icon">
+                        📅
+                    </div>
+
+                    <h3>
+                        Appointments
+                    </h3>
+
+                    <p>
+                        Book and manage your healthcare appointments.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="bookAppointment()">
+
+                        Book Now →
+
+                    </button>
+
+                </article>
+
+
+                <!-- Medicine -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        💊
+                    </div>
+
+                    <h3>
+                        Medicine
+                    </h3>
+
+                    <p>
+                        Check medicine availability and manage reminders.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="scrollToSection('medicine')">
+
+                        Medicine Care →
+
+                    </button>
+
+                </article>
+
+
+                <!-- Video Call -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        📹
+                    </div>
+
+                    <h3>
+                        Video Consultation
+                    </h3>
+
+                    <p>
+                        Connect with a doctor through online consultation.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="videoConsultation()">
+
+                        Start Video Call →
+
+                    </button>
+
+                </article>
+
+
+                <!-- Emergency -->
+
+                <article class="service-card emergency-card">
+
+                    <div class="service-icon">
+                        🚑
+                    </div>
+
+                    <h3>
+                        Emergency
+                    </h3>
+
+                    <p>
+                        Get quick access to emergency support.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="emergencyCall()">
+
+                        Emergency Call →
+
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MEDICINE ================= -->
+
+        <section id="medicine" class="medicine-section">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    MEDICINE CARE
+                </span>
+
+                <h2>
+                    Manage your
+                    <span>medicines</span>
+                    easily
+                </h2>
+
+                <p>
+                    Check medicine availability, view basic information,
+                    set reminders and manage prescriptions.
+                </p>
+
+            </div>
+
+
+            <div class="medicine-grid">
+
+                <!-- Medicine Availability -->
+
+                <article class="medicine-card">
+
+                    <div class="medicine-icon">
+                        💊
+                    </div>
+
+                    <h3>
+                        Medicine Availability
+                    </h3>
+
+                    <p>
+                        Search for a medicine and check its availability.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="checkMedicine()">
+
+                        Check Medicine →
+
+                    </button>
+
+                </article>
+
+
+                <!-- Medicine Information -->
+
+                <article class="medicine-card">
+
+                    <div class="medicine-icon">
+                        ℹ️
+                    </div>
+
+                    <h3>
+                        Medicine Information
+                    </h3>
+
+                    <p>
+                        View basic information about a medicine.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="medicineInformation()">
+
+                        View Information →
+
+                    </button>
+
+                </article>
+
+
+                <!-- Medicine Reminder -->
+
+                <article class="medicine-card">
+
+                    <div class="medicine-icon">
+                        ⏰
+                    </div>
+
+                    <h3>
+                        Medicine Reminder
+                    </h3>
+
+                    <p>
+                        Set a reminder for your medicine schedule.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="medicineReminder()">
+
+                        Set Reminder →
+
+                    </button>
+
+                </article>
+
+
+                <!-- Prescription -->
+
+                <article class="medicine-card">
+
+                    <div class="medicine-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Prescription
+                    </h3>
+
+                    <p>
+                        Select a prescription file from your computer.
+                    </p>
+
+                    <label class="upload-button">
+
+                        Upload Prescription
+
+                        <input
+                            type="file"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            onchange="uploadPrescription(this)">
+
+                    </label>
+
+                </article>
+
+
+                <!-- Pharmacy -->
+
+                <article class="medicine-card">
+
+                    <div class="medicine-icon">
+                        🏥
+                    </div>
+
+                    <h3>
+                        Find Pharmacy
+                    </h3>
+
+                    <p>
+                        Search for a pharmacy near your location.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="findPharmacy()">
+
+                        Find Pharmacy →
+
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DOCTORS ================= -->
+
+        <section id="doctors" class="doctors-section">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    OUR DOCTORS
+                </span>
+
+                <h2>
+                    Meet our experienced
+                    <span>doctors</span>
+                </h2>
+
+                <p>
+                    Choose a specialist and request an appointment.
+                </p>
+
+            </div>
+
+
+            <div class="doctor-grid">
+
+                <!-- Doctor 1 -->
+
+                <article class="doctor-card">
+
+                    <div class="doctor-photo doctor-blue">
+                        👨‍⚕️
+                    </div>
+
+                    <div class="doctor-info">
+
+                        <span>
+                            GENERAL MEDICINE
+                        </span>
+
+                        <h3>
+                            Dr. Rahul Sharma
+                        </h3>
+
+                        <p>
+                            General Physician
+                        </p>
+
+                        <button
+                            type="button"
+                            onclick="bookDoctor('Dr. Rahul Sharma')">
+
+                            Book Appointment
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Doctor 2 -->
+
+                <article class="doctor-card">
+
+                    <div class="doctor-photo doctor-green">
+                        👩‍⚕️
+                    </div>
+
+                    <div class="doctor-info">
+
+                        <span>
+                            CARDIOLOGY
+                        </span>
+
+                        <h3>
+                            Dr. Priya Patil
+                        </h3>
+
+                        <p>
+                            Cardiologist
+                        </p>
+
+                        <button
+                            type="button"
+                            onclick="bookDoctor('Dr. Priya Patil')">
+
+                            Book Appointment
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Doctor 3 -->
+
+                <article class="doctor-card">
+
+                    <div class="doctor-photo doctor-purple">
+                        👨‍⚕️
+                    </div>
+
+                    <div class="doctor-info">
+
+                        <span>
+                            DERMATOLOGY
+                        </span>
+
+                        <h3>
+                            Dr. Amit Verma
+                        </h3>
+
+                        <p>
+                            Dermatologist
+                        </p>
+
+                        <button
+                            type="button"
+                            onclick="bookDoctor('Dr. Amit Verma')">
+
+                            Book Appointment
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPOINTMENT ================= -->
+
+        <section id="appointment" class="appointment-section">
+
+            <div class="appointment-info">
+
+                <span class="eyebrow">
+                    ONLINE APPOINTMENT
+                </span>
+
+                <h2>
+                    Make an appointment
+                    with a healthcare professional.
+                </h2>
+
+                <p>
+                    Fill in the form and submit your appointment request.
+                </p>
+
+                <ul>
+
+                    <li>
+                        ✓ Easy appointment request
+                    </li>
+
+                    <li>
+                        ✓ Choose your department
+                    </li>
+
+                    <li>
+                        ✓ Quick support
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <form
+                class="appointment-form"
+                id="appointmentForm">
+
+                <h3>
+                    Book an Appointment
+                </h3>
+
+
+                <label for="patientName">
+                    Your Name
+                </label>
+
+                <input
+                    id="patientName"
+                    type="text"
+                    placeholder="Enter your name"
+                    required>
+
+
+                <label for="department">
+                    Department
+                </label>
+
+                <select
+                    id="department"
+                    required>
+
+                    <option value="">
+                        Select department
+                    </option>
+
+                    <option>
+                        General Medicine
+                    </option>
+
+                    <option>
+                        Cardiology
+                    </option>
+
+                    <option>
+                        Dermatology
+                    </option>
+
+                    <option>
+                        Pediatrics
+                    </option>
+
+                </select>
+
+
+                <label for="appointmentDate">
+                    Preferred Date
+                </label>
+
+                <input
+                    id="appointmentDate"
+                    type="date"
+                    required>
+
+
+                <button
+                    class="primary-btn"
+                    type="submit">
+
+                    Request Appointment
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= EMERGENCY ================= -->
+
+        <section class="emergency-banner">
+
+            <div>
+
+                <span class="eyebrow">
+                    NEED URGENT HELP?
+                </span>
+
+                <h2>
+                    Emergency support is one click away.
+                </h2>
+
+                <p>
+                    For a genuine emergency, contact your local
+                    emergency service immediately.
+                </p>
+
+            </div>
+
+            <button
+                class="emergency-large"
+                type="button"
+                onclick="emergencyCall()">
+
+                🚨 Emergency Call
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section
+            id="contact"
+            class="contact-section section">
+
+            <div>
+
+                <span class="eyebrow">
+                    CONTACT SUPPORT
+                </span>
+
+                <h2>
+                    We're here to help.
+                </h2>
+
+                <p>
+                    Contact HealthCare+ for general website support
+                    and appointment assistance.
+                </p>
+
+            </div>
+
+
+            <div class="contact-cards">
+
+                <a
+                    href="mailto:healthcare@example.com"
+                    class="contact-card">
+
+                    <span>
+                        ✉️
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Email Support
+                        </strong>
+
+                        <small>
+                            healthcare@example.com
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="tel:+919876543210"
+                    class="contact-card">
+
+                    <span>
+                        📞
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Support Phone
+                        </strong>
+
+                        <small>
+                            +91 98765 43210
+                        </small>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+
+            <span class="logo-mark">
+                ✚
+            </span>
+
+            HealthCare<span>+</span>
+
+        </div>
+
+        <p>
+            © 2026 HealthCare+ |
+            Healthcare Web Application
+        </p>
+
+    </footer>
+
+
+    <!-- Notification -->
+
+    <div
+        id="toast"
+        class="toast"
+        role="status"
+        aria-live="polite">
+    </div>
+
+
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>

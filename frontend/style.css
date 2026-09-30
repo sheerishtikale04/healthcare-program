@@ -1,0 +1,1792 @@
+/* ========================================
+   HEALTHCARE+
+   MAIN STYLESHEET
+   ======================================== */
+
+
+/* ========================================
+   VARIABLES
+   ======================================== */
+
+:root {
+
+    --primary: #0b9f9a;
+
+    --primary-dark: #087a76;
+
+    --primary-light: #e8f8f7;
+
+    --dark: #123434;
+
+    --text: #526565;
+
+    --white: #ffffff;
+
+    --light: #f5fbfb;
+
+    --border: #dcebea;
+
+    --danger: #e64d4d;
+
+    --shadow:
+        0 18px 50px rgba(15, 75, 73, 0.10);
+
+    --radius: 22px;
+}
+
+
+/* ========================================
+   RESET
+   ======================================== */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+
+    background: var(--white);
+
+    line-height: 1.6;
+}
+
+
+button,
+input,
+select {
+
+    font: inherit;
+}
+
+
+button {
+
+    cursor: pointer;
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.header {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin: auto;
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    color: var(--dark);
+}
+
+
+.logo-mark {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 35px;
+
+    height: 35px;
+
+    color: white;
+
+    background: var(--primary);
+
+    border-radius: 10px;
+}
+
+
+.logo span:last-child > span,
+footer .logo > span:last-child {
+
+    color: var(--primary);
+}
+
+
+/* NAVIGATION */
+
+.nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.nav a {
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: color .2s ease;
+}
+
+
+.nav a:hover {
+
+    color: var(--primary);
+}
+
+
+/* BUTTONS */
+
+.emergency-btn,
+.primary-btn,
+.secondary-btn,
+.service-card button,
+.doctor-info button,
+.medicine-card button,
+.emergency-large {
+
+    border: 0;
+
+    border-radius: 11px;
+
+    padding: 12px 19px;
+
+    font-weight: 800;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+
+.emergency-btn,
+.emergency-large {
+
+    color: white;
+
+    background: var(--danger);
+}
+
+
+.primary-btn {
+
+    color: white;
+
+    background: var(--primary);
+
+    box-shadow:
+        0 10px 25px
+        rgba(11, 159, 154, .22);
+}
+
+
+.secondary-btn {
+
+    color: var(--dark);
+
+    background: white;
+
+    border: 1px solid var(--border);
+}
+
+
+.emergency-btn:hover,
+.primary-btn:hover,
+.secondary-btn:hover,
+.service-card button:hover,
+.doctor-info button:hover,
+.medicine-card button:hover,
+.emergency-large:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE MENU */
+
+.menu-btn {
+
+    display: none;
+
+    border: 0;
+
+    background: transparent;
+
+    font-size: 25px;
+}
+
+
+/* ========================================
+   HERO
+   ======================================== */
+
+.hero {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin: 25px auto 0;
+
+    min-height: 590px;
+
+    border-radius: 32px;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr .95fr;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(255,255,255,.2),
+            transparent 30%
+        ),
+        linear-gradient(
+            125deg,
+            #087d79,
+            #0db1aa
+        );
+
+    color: white;
+
+    padding: 70px;
+
+    position: relative;
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 600px;
+}
+
+
+.eyebrow {
+
+    color: var(--primary);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 900;
+}
+
+
+.hero .eyebrow {
+
+    color: #d5fffc;
+}
+
+
+.hero h1 {
+
+    margin: 14px 0;
+
+    font-size:
+        clamp(
+            45px,
+            6vw,
+            74px
+        );
+
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+}
+
+
+.hero h1 span {
+
+    color: #c9fffb;
+}
+
+
+.hero p {
+
+    max-width: 570px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .88
+        );
+
+    font-size: 17px;
+}
+
+
+.hero-actions {
+
+    display: flex;
+
+    gap: 13px;
+
+    margin: 30px 0;
+}
+
+
+.trust-row {
+
+    display: flex;
+
+    gap: 35px;
+}
+
+
+.trust-row div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.trust-row strong {
+
+    font-size: 23px;
+}
+
+
+.trust-row span {
+
+    font-size: 12px;
+
+    opacity: .75;
+}
+
+
+/* ========================================
+   HERO DOCTOR
+   ======================================== */
+
+.hero-visual {
+
+    height: 480px;
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+}
+
+
+.circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .22
+        );
+}
+
+
+.circle-one {
+
+    width: 420px;
+
+    height: 420px;
+}
+
+
+.circle-two {
+
+    width: 330px;
+
+    height: 330px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .08
+        );
+}
+
+
+.doctor-illustration {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 250px;
+
+    height: 370px;
+}
+
+
+.doctor-head {
+
+    position: absolute;
+
+    width: 115px;
+
+    height: 125px;
+
+    top: 40px;
+
+    left: 68px;
+
+    background: #f2c5a7;
+
+    border-radius:
+        50% 50%
+        46% 46%;
+
+    box-shadow:
+        inset -15px 0
+        rgba(0,0,0,.06);
+}
+
+
+.doctor-head::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+
+    height: 55px;
+
+    top: -14px;
+
+    left: -8px;
+
+    background: #263b3b;
+
+    border-radius:
+        70% 70%
+        35% 35%;
+}
+
+
+.doctor-body {
+
+    position: absolute;
+
+    width: 190px;
+
+    height: 225px;
+
+    top: 155px;
+
+    left: 30px;
+
+    background: white;
+
+    border-radius:
+        70px 70px
+        20px 20px;
+
+    box-shadow:
+        0 20px 35px
+        rgba(0,0,0,.12);
+}
+
+
+.stethoscope {
+
+    position: absolute;
+
+    left: 72px;
+
+    top: 45px;
+
+    font-size: 50px;
+
+    color: #405b5b;
+}
+
+
+.doctor-cross {
+
+    position: absolute;
+
+    right: 35px;
+
+    top: 28px;
+
+    color: var(--primary);
+
+    font-size: 30px;
+}
+
+
+.doctor-arm {
+
+    position: absolute;
+
+    width: 60px;
+
+    height: 150px;
+
+    right: 10px;
+
+    bottom: 0;
+
+    background: #f2c5a7;
+
+    border-radius: 40px;
+
+    transform: rotate(-18deg);
+}
+
+
+/* FLOATING CARDS */
+
+.floating-card {
+
+    position: absolute;
+
+    z-index: 4;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .95
+        );
+
+    color: var(--dark);
+
+    padding: 13px 17px;
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.floating-card > span {
+
+    font-size: 23px;
+}
+
+
+.floating-card div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.floating-card small {
+
+    color: var(--text);
+}
+
+
+.card-top {
+
+    top: 65px;
+
+    right: 0;
+}
+
+
+.card-bottom {
+
+    bottom: 55px;
+
+    left: 0;
+}
+
+
+/* ========================================
+   STATS
+   ======================================== */
+
+.stats {
+
+    width:
+        min(
+            1050px,
+            calc(100% - 50px)
+        );
+
+    margin: -25px auto 0;
+
+    position: relative;
+
+    z-index: 5;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    padding: 25px;
+}
+
+
+.stats div {
+
+    padding:
+        10px 25px;
+
+    border-right:
+        1px solid
+        var(--border);
+}
+
+
+.stats div:last-child {
+
+    border-right: 0;
+}
+
+
+.stats strong,
+.stats span {
+
+    display: block;
+}
+
+
+.stats strong {
+
+    color: var(--dark);
+}
+
+
+.stats span {
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   COMMON SECTION
+   ======================================== */
+
+.section {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin: 100px auto;
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 650px;
+
+    margin:
+        0 auto 45px;
+}
+
+
+.section-heading h2,
+.appointment-info h2,
+.contact-section h2 {
+
+    color: var(--dark);
+
+    font-size:
+        clamp(
+            32px,
+            4vw,
+            46px
+        );
+
+    line-height: 1.15;
+
+    margin: 10px 0;
+}
+
+
+.section-heading h2 span {
+
+    color: var(--primary);
+}
+
+
+.section-heading p {
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   SERVICES
+   ======================================== */
+
+.service-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.service-card {
+
+    padding: 30px;
+
+    min-height: 280px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: var(--radius);
+
+    background: white;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.service-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.service-card.featured {
+
+    background: var(--primary);
+
+    color: white;
+}
+
+
+.service-card.featured h3,
+.service-card.featured p {
+
+    color: white;
+}
+
+
+.service-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 16px;
+
+    background:
+        var(--primary-light);
+
+    font-size: 28px;
+
+    margin-bottom: 22px;
+}
+
+
+.featured .service-icon {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .2
+        );
+}
+
+
+.service-card h3 {
+
+    color: var(--dark);
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+
+.service-card p {
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+.service-card button {
+
+    color: var(--primary-dark);
+
+    background:
+        var(--primary-light);
+}
+
+
+.featured button {
+
+    color: var(--primary-dark);
+
+    background: white;
+}
+
+
+.emergency-card {
+
+    border-color:
+        #ffd2d2;
+}
+
+
+/* ========================================
+   MEDICINE
+   ======================================== */
+
+.medicine-section {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin: 100px auto;
+}
+
+
+.medicine-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.medicine-card {
+
+    padding: 30px;
+
+    min-height: 280px;
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: var(--radius);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.medicine-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.medicine-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        var(--primary-light);
+
+    border-radius: 16px;
+
+    font-size: 29px;
+
+    margin-bottom: 20px;
+}
+
+
+.medicine-card h3 {
+
+    color: var(--dark);
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+
+.medicine-card p {
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+.medicine-card button {
+
+    color: white;
+
+    background:
+        var(--primary);
+}
+
+
+.medicine-card button:hover {
+
+    background:
+        var(--primary-dark);
+}
+
+
+.upload-button {
+
+    display: inline-block;
+
+    padding:
+        12px 18px;
+
+    border-radius: 11px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+.upload-button input {
+
+    display: none;
+}
+
+
+/* ========================================
+   DOCTORS
+   ======================================== */
+
+.doctors-section {
+
+    background:
+        var(--light);
+
+    width: 100%;
+
+    padding:
+        90px
+        max(
+            20px,
+            calc(
+                (100% - 1100px) / 2
+            )
+        );
+}
+
+
+.doctor-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.doctor-card {
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(
+            15,
+            75,
+            73,
+            .06
+        );
+}
+
+
+.doctor-photo {
+
+    height: 250px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 100px;
+}
+
+
+.doctor-blue {
+
+    background: #dff5f5;
+}
+
+
+.doctor-green {
+
+    background: #e8f5ed;
+}
+
+
+.doctor-purple {
+
+    background: #eee8f8;
+}
+
+
+.doctor-info {
+
+    padding: 25px;
+}
+
+
+.doctor-info > span {
+
+    color: var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.doctor-info h3 {
+
+    color: var(--dark);
+
+    margin: 5px 0;
+}
+
+
+.doctor-info p {
+
+    margin-bottom: 18px;
+}
+
+
+.doctor-info button {
+
+    width: 100%;
+
+    color: white;
+
+    background:
+        var(--primary);
+}
+
+
+/* ========================================
+   APPOINTMENT
+   ======================================== */
+
+.appointment-section {
+
+    width:
+        min(
+            1100px,
+            calc(100% - 40px)
+        );
+
+    margin: 100px auto;
+
+    padding: 55px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr .85fr;
+
+    gap: 60px;
+
+    border-radius: 30px;
+
+    background:
+        var(--primary-light);
+}
+
+
+.appointment-info h2 {
+
+    font-size: 42px;
+}
+
+
+.appointment-info ul {
+
+    list-style: none;
+
+    margin-top: 25px;
+
+    display: grid;
+
+    gap: 10px;
+
+    color: var(--dark);
+
+    font-weight: 700;
+}
+
+
+.appointment-form {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.appointment-form h3 {
+
+    color: var(--dark);
+
+    margin-bottom: 20px;
+
+    font-size: 23px;
+}
+
+
+.appointment-form label {
+
+    display: block;
+
+    margin:
+        12px 0 6px;
+
+    color: var(--dark);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.appointment-form input,
+.appointment-form select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 10px;
+
+    outline: none;
+}
+
+
+.appointment-form input:focus,
+.appointment-form select:focus {
+
+    border-color:
+        var(--primary);
+}
+
+
+.appointment-form .primary-btn {
+
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+
+/* ========================================
+   EMERGENCY
+   ======================================== */
+
+.emergency-banner {
+
+    width:
+        min(
+            1100px,
+            calc(100% - 40px)
+        );
+
+    margin:
+        0 auto 100px;
+
+    padding:
+        40px 50px;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background:
+        #183b3b;
+
+    color: white;
+}
+
+
+.emergency-banner .eyebrow {
+
+    color:
+        #ffb7b7;
+}
+
+
+.emergency-banner h2 {
+
+    margin: 7px 0;
+
+    font-size: 30px;
+}
+
+
+.emergency-banner p {
+
+    color:
+        #c8dada;
+}
+
+
+/* ========================================
+   CONTACT
+   ======================================== */
+
+.contact-section {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.contact-cards {
+
+    display: grid;
+
+    gap: 15px;
+}
+
+
+.contact-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 15px;
+}
+
+
+.contact-card > span {
+
+    font-size: 25px;
+}
+
+
+.contact-card div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.contact-card strong {
+
+    color: var(--dark);
+}
+
+
+.contact-card small {
+
+    color: var(--text);
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+
+    background:
+        #103333;
+
+    color:
+        #bfd3d2;
+
+    padding:
+        30px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+footer .logo {
+
+    color: white;
+}
+
+
+footer p {
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   TOAST MESSAGE
+   ======================================== */
+
+.toast {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    transform:
+        translate(-50%, 120px);
+
+    opacity: 0;
+
+    z-index: 100;
+
+    max-width:
+        calc(100% - 30px);
+
+    padding:
+        14px 20px;
+
+    border-radius: 12px;
+
+    color: white;
+
+    background:
+        #183b3b;
+
+    box-shadow:
+        var(--shadow);
+
+    transition: .3s ease;
+}
+
+
+.toast.show {
+
+    transform:
+        translate(-50%, 0);
+
+    opacity: 1;
+}
+
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 20px;
+
+        right: 20px;
+
+        padding: 20px;
+
+        background: white;
+
+        box-shadow:
+            var(--shadow);
+
+        border-radius: 15px;
+
+        z-index: 50;
+
+        flex-direction: column;
+    }
+
+
+    .nav.open {
+
+        display: flex;
+    }
+
+
+    .menu-btn {
+
+        display: block;
+    }
+
+
+    .header .emergency-btn {
+
+        margin-left: auto;
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        padding: 50px 35px;
+
+        text-align: center;
+    }
+
+
+    .hero-content {
+
+        margin: auto;
+    }
+
+
+    .hero p {
+
+        margin: auto;
+    }
+
+
+    .hero-actions,
+    .trust-row {
+
+        justify-content: center;
+    }
+
+
+    .hero-visual {
+
+        height: 390px;
+    }
+
+
+    .service-grid,
+    .medicine-grid,
+    .doctor-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .appointment-section,
+    .contact-section {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        width:
+            calc(100% - 25px);
+    }
+
+
+    .header .emergency-btn {
+
+        display: none;
+    }
+
+
+    .hero {
+
+        width:
+            calc(100% - 20px);
+
+        padding:
+            40px 20px;
+
+        border-radius: 22px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 43px;
+    }
+
+
+    .hero-actions {
+
+        flex-direction: column;
+    }
+
+
+    .trust-row {
+
+        gap: 20px;
+    }
+
+
+    .hero-visual {
+
+        transform:
+            scale(.82);
+
+        margin:
+            -20px 0;
+    }
+
+
+    .stats {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .stats div {
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid
+            var(--border);
+
+        padding: 15px;
+    }
+
+
+    .stats div:last-child {
+
+        border-bottom: 0;
+    }
+
+
+    .section,
+    .medicine-section {
+
+        margin-top: 70px;
+
+        margin-bottom: 70px;
+    }
+
+
+    .service-grid,
+    .medicine-grid,
+    .doctor-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .appointment-section {
+
+        padding: 25px;
+    }
+
+
+    .appointment-info h2 {
+
+        font-size: 32px;
+    }
+
+
+    .emergency-banner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 30px;
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
+
+
+/* ========================================
+   REDUCE MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+    }
+
+    * {
+
+        transition-duration:
+            .01ms !important;
+    }
+}
